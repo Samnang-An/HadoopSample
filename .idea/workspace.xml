@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed70c60f-c4dc-435c-b0cf-ee5882412916" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/Addison.Wesley.Enterprise.Integration.Patterns.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/big.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/output/part-00000" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bd/lab/WCMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bd/lab/WCReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bd/lab/WCRunner.java" afterDir="false" />
-    </list>
+    <list default="true" id="ed70c60f-c4dc-435c-b0cf-ee5882412916" name="Changes" comment="feat: word count" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -84,8 +71,25 @@
       <option name="presentableId" value="Default" />
       <updated>1713035509174</updated>
       <workItem from="1713035510299" duration="5601000" />
-      <workItem from="1713112253890" duration="727000" />
+      <workItem from="1713112253890" duration="1045000" />
     </task>
+    <task id="LOCAL-00001" summary="init: init project">
+      <option name="closed" value="true" />
+      <created>1713156016380</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713156016380</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: word count">
+      <option name="closed" value="true" />
+      <created>1713156064732</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713156064732</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,12 +97,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init: init project" />
+    <MESSAGE value="feat: word count" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: word count" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bd/lab/WCMapper.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/bd/lab/wordcount/WCMapper.java</url>
           <line>21</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
