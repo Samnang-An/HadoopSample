@@ -1,24 +1,21 @@
 package com.bd.lab.wordcount;
 
-import org.apache.hadoop.io.Text;
 import java.io.IOException;
-import java.util.Iterator;
 import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.mapred.MapReduceBase;
-import org.apache.hadoop.mapred.OutputCollector;
-import org.apache.hadoop.mapred.Reducer;
-import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
 
-public class WCReducer extends MapReduceBase implements
-    Reducer<Text, IntWritable, Text, IntWritable> {
+public class WCReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
-  public void reduce(Text key, Iterator<IntWritable> values,
-      OutputCollector<Text, IntWritable> output,
-      Reporter reporter) throws IOException {
+  private final IntWritable result = new IntWritable();
+
+  public void reduce(Text key, Iterable<IntWritable> values, Context context)
+      throws IOException, InterruptedException {
     int sum = 0;
-    while (values.hasNext()) {
-      sum += values.next().get();
+    for (IntWritable val : values) {
+      sum += val.get();
     }
-    output.collect(key, new IntWritable(sum));
+    result.set(sum);
+    context.write(key, result);
   }
 }

@@ -5,24 +5,19 @@ import java.util.StringTokenizer;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.MapReduceBase;
-import org.apache.hadoop.mapred.Mapper;
-import org.apache.hadoop.mapred.OutputCollector;
-import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.mapreduce.Mapper;
 
-public class WCMapper extends MapReduceBase implements
-    Mapper<LongWritable, Text, Text, IntWritable> {
+public class WCMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
   private final static IntWritable one = new IntWritable(1);
   private final Text word = new Text();
 
-  public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output,
-      Reporter reporter) throws IOException {
-    String line = value.toString();
-    StringTokenizer tokenizer = new StringTokenizer(line);
-    while (tokenizer.hasMoreTokens()) {
-      word.set(tokenizer.nextToken());
-      output.collect(word, one);
+  public void map(LongWritable key, Text value, Context context)
+      throws IOException, InterruptedException {
+    StringTokenizer itr = new StringTokenizer(value.toString());
+    while (itr.hasMoreTokens()) {
+      word.set(itr.nextToken());
+      context.write(word, one);
     }
   }
 }
