@@ -1,5 +1,11 @@
 # Hadoop Single Node Cluster
 
+### ssh localhost
+> ssh localhost
+
+### Format HDFS
+> hdfs namenode -format
+
 ### Start up
 > start-all.sh
 
@@ -13,3 +19,10 @@
 
 ### Run program
 > hadoop jar target/YOUR_JAR_FILE your.package.name.runner.class /input-name/file-name.txt /output
+
+
+# URL
+
+> http://localhost:9870/
+
+> http://localhost:8088/

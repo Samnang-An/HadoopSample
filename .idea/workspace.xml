@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed70c60f-c4dc-435c-b0cf-ee5882412916" name="Changes" comment="add readme" />
+    <list default="true" id="ed70c60f-c4dc-435c-b0cf-ee5882412916" name="Changes" comment="feat: In Mapper Wordcount Combination">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -20,6 +30,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "Samnang-An"
+    }
+  ],
+  "lastFilter": {
+    "assignee": "Samnang-An"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3a5fbc83-e522-41fa-bb15-6c44d37e6d85" />
+        <option name="url" value="git@github.com:Samnang-An/HadoopSample.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,13 +66,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.WCInMapperRunner.executor": "Run",
     "Application.WCRunner.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "init",
+    "git-widget-placeholder": "docker",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/samnang/Documents/source/WordCount",
+    "last_opened_file_path": "/home/samnang/Documents/source/WordCount/input",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,11 +84,28 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/input" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/bd/lab/inmapperwordcount" />
+      <recent name="$PROJECT_DIR$/../inmapper/wordcount/src/main/java/com/bd/lab/wordcount" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/files" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="WCInMapperRunner" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bd.lab.inmapperwordcount.WCInMapperRunner" />
+      <module name="WordCount" />
+      <option name="PROGRAM_PARAMETERS" value="input/ output/" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bd.lab.inmapperwordcount.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="LiferayDockerServerConfiguration" factoryName="Liferay Docker Server">
       <option name="passParentEnvironments" value="true" />
       <option name="workspaceLocation" value="$PROJECT_DIR$" />
@@ -85,7 +131,9 @@
       <option name="presentableId" value="Default" />
       <updated>1713035509174</updated>
       <workItem from="1713035510299" duration="5601000" />
-      <workItem from="1713112253890" duration="2861000" />
+      <workItem from="1713112253890" duration="3042000" />
+      <workItem from="1713193879406" duration="7567000" />
+      <workItem from="1713205623925" duration="13034000" />
     </task>
     <task id="LOCAL-00001" summary="init: init project">
       <option name="closed" value="true" />
@@ -127,7 +175,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713158045774</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add readme">
+      <option name="closed" value="true" />
+      <created>1713158123028</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713158123028</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: update Word count to new API">
+      <option name="closed" value="true" />
+      <created>1713239763162</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713239763162</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: In Mapper Wordcount Combination">
+      <option name="closed" value="true" />
+      <created>1713240633335</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713240633335</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,14 +212,16 @@
     <MESSAGE value="additional files" />
     <MESSAGE value="feat: create hadoop docker" />
     <MESSAGE value="add readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="add readme" />
+    <MESSAGE value="feat: update Word count to new API" />
+    <MESSAGE value="feat: In Mapper Wordcount Combination" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: In Mapper Wordcount Combination" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bd/lab/wordcount/WCMapper.java</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
