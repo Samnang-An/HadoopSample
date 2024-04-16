@@ -1,15 +1,18 @@
 # Hadoop Single Node Cluster
+ 
+Start Hadoop
+> scripts/start-hadoop.sh
 
-### Start up
-> start-all.sh
 
-### Shut down
-> stop-all.sh
+### Programs
 
-### Create input and add file
-> hadoop fs -mkdir /input-name
+Run Wordcount Program
+> scripts/wordcount.sh
 
-> hadoop fs -put /path/to/your/file.txt /input-name
+Run In Mapper Wordcount Program
+> scripts/inmapper-wordcount.sh
 
-### Run program
-> hadoop jar target/YOUR_JAR_FILE your.package.name.runner.class /input-name/file-name.txt /output
+
+# URL
+1. http://localhost:9870/
+1. http://localhost:8088/

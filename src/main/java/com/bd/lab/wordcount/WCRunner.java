@@ -1,30 +1,29 @@
 package com.bd.lab.wordcount;
 
 import java.io.IOException;
-import org.apache.hadoop.io.Text;
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.mapred.FileInputFormat;
-import org.apache.hadoop.mapred.FileOutputFormat;
-import org.apache.hadoop.mapred.JobClient;
-import org.apache.hadoop.mapred.JobConf;
-import org.apache.hadoop.mapred.TextInputFormat;
-import org.apache.hadoop.mapred.TextOutputFormat;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
 
 public class WCRunner {
 
-  public static void main(String[] args) throws IOException {
-    JobConf conf = new JobConf(WCRunner.class);
-    conf.setJobName("WordCount");
-    conf.setOutputKeyClass(Text.class);
-    conf.setOutputValueClass(IntWritable.class);
-    conf.setMapperClass(WCMapper.class);
-    conf.setCombinerClass(WCReducer.class);
-    conf.setReducerClass(WCReducer.class);
-    conf.setInputFormat(TextInputFormat.class);
-    conf.setOutputFormat(TextOutputFormat.class);
-    FileInputFormat.setInputPaths(conf, new Path(args[0]));
-    FileOutputFormat.setOutputPath(conf, new Path(args[1]));
-    JobClient.runJob(conf);
+  public static void main(String[] args)
+      throws IOException, InterruptedException, ClassNotFoundException {
+    Configuration conf = new Configuration();
+    Job job = Job.getInstance(conf, "word count");
+    job.setJarByClass(WCRunner.class);
+    job.setMapperClass(WCMapper.class);
+    job.setCombinerClass(WCReducer.class);
+    job.setReducerClass(WCReducer.class);
+    job.setOutputKeyClass(Text.class);
+    job.setOutputValueClass(IntWritable.class);
+    FileInputFormat.addInputPath(job, new Path(args[0]));
+    FileOutputFormat.setOutputPath(job, new Path(args[1]));
+    System.exit(job.waitForCompletion(true) ? 0 : 1);
   }
 }
