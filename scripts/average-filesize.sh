@@ -5,4 +5,4 @@ hadoop fs -rm -r -f /average
 hadoop fs -mkdir /average
 hadoop fs -put files/logs/access_log /average
 # Run MapReduce Program
- hadoop jar target/WordCount-1.0-SNAPSHOT.jar com.bd.lab.average.WCAverageRunner /average/access_log /average-output
+ hadoop jar target/WordCount-1.0-SNAPSHOT.jar com.bd.lab.average.AverageRunner /average/access_log /average-output
