@@ -23,9 +23,11 @@ public class RFRunner {
     job.setMapperClass(RFMapper.class);
     job.setCombinerClass(RFReducer.class);
     job.setReducerClass(RFReducer.class);
+    job.setPartitionerClass(RFPartitioner.class);
 
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(MapWritable.class);
+    job.setNumReduceTasks(3);
 
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));

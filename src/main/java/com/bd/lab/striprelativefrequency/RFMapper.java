@@ -1,8 +1,7 @@
 package com.bd.lab.striprelativefrequency;
 
 import java.io.IOException;
-import java.util.StringTokenizer;
-import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.MapWritable;
 import org.apache.hadoop.io.Text;
@@ -19,8 +18,8 @@ public class RFMapper extends Mapper<LongWritable, Text, Text, MapWritable> {
       int j = i + 1;
       while (j < terms.length && terms[j] != term) {
         map.put(new Text(terms[j]),
-            new IntWritable(
-                ((IntWritable) map.getOrDefault(terms[j], new IntWritable(0))).get() + 1));
+            new DoubleWritable(
+                ((DoubleWritable) map.getOrDefault(terms[j], new DoubleWritable(0))).get() + 1));
         j++;
       }
       context.write(new Text(term), map);

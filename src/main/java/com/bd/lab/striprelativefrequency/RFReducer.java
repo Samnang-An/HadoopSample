@@ -2,7 +2,7 @@ package com.bd.lab.striprelativefrequency;
 
 import java.io.IOException;
 import java.util.Map;
-import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.MapWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
@@ -14,12 +14,13 @@ public class RFReducer extends Reducer<Text, MapWritable, Text, MapWritable> {
       throws IOException, InterruptedException {
     MapWritable map = new MapWritable();
     values.iterator().forEachRemaining(map::putAll);
-    int sum = 0;
+    double sum = 0;
     for (Map.Entry<Writable, Writable> entry : map.entrySet()) {
-      sum += Integer.parseInt(entry.getValue().toString());
+      sum += ((DoubleWritable) entry.getValue()).get();
     }
     for (Map.Entry<Writable, Writable> entry : map.entrySet()) {
-      entry.setValue(new IntWritable(((IntWritable) entry.getValue()).get() / sum));
+      double avg = ((DoubleWritable) entry.getValue()).get() / sum;
+      entry.setValue(new DoubleWritable(avg));
     }
     context.write(key, map);
   }
