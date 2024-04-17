@@ -7,6 +7,6 @@ hadoop com.sun.tools.javac.Main relativeoccurencepaire.java
  jar cf rop.jar relativeoccurencepaire*.class
 
  # execute the program
-  hadoop jar rop.jar relativeoccurencepaire /home/kortez/bigdata/input output
+  hadoop jar rop.jar relativeoccurencepaire input output
 
 # check output in output directory
